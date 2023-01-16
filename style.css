@@ -1,0 +1,44 @@
+button {
+  margin-top: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #106ee8;
+  font-family: "Xanh Mono", monospace;
+}
+button:hover {
+  cursor: pointer;
+  transition: all 200ms ease;
+  background: #106ee8;
+}
+.btn-secondary {
+  margin-top: 5px;
+}
+.card {
+  font-family: "Anton", sans-serif;
+  margin: 45px;
+  padding: 15px 15px 15px 15px;
+}
+.icon {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 950px;
+  margin-bottom: -5px;
+  margin-top: -150px;
+  font-size: 150px;
+  color: #a8d7f7;
+}
+.weather {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 150px;
+  margin-left: 600px;
+  margin-bottom: -5px;
+  margin-top: -150px;
+  color: #a8d7f7;
+}
