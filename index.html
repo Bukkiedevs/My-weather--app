@@ -33,76 +33,80 @@
 
   <body>
     <div class="container">
-      <form id="logIn">
-        <input
-          type="text"
-          placeholder="Enter a country"
-          autofocus="on"
-          style="margin-top: 25px; width: 35%"
-          id="inputIn"
-        />
-        <input type="submit" value="Search" id="outputIn" />
-        <span
-          ><button type="button" class="btn btn-secondary" id="buttonID">
-            Current
-          </button>
-        </span>
-      </form>
+      <div class="weatherstructure">
+        <form id="logIn">
+          <input
+            type="text"
+            placeholder="Enter a country"
+            autofocus="on"
+            style="margin-top: 25px; width: 35%"
+            id="inputIn"
+          />
+          <input type="submit" value="Search" id="outputIn" />
+          <span
+            ><button type="button" class="btn btn-secondary" id="buttonID">
+              Current
+            </button>
+          </span>
+        </form>
 
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <div class="col">
-            <span id="country"> City</span>
-            <span id="cityChange">Degree </span>
-            <span class="currentTemp"></span
-            ><span>
-              <a href="#" id="celsius">°C </a>
-              <a href="#" id="fah">|°F </a></span
-            >
-            <div><span id="season"> Monday 17:15</span></div>
-            <div>Sunny ☀</div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <div class="col">
+              <span id="country"> City</span>
+              <span id="cityChange">Degree </span>
+              <span class="currentTemp"></span
+              ><span>
+                <a href="#" id="celsius">°C </a>
+                <a href="#" id="fah">|°F </a></span
+              >
+              <div><span id="season"> Monday 17:15</span></div>
+              <div>Sunny ☀</div>
+            </div>
           </div>
         </div>
+        <br />
+        <i class="fa-solid fa-cloud-sun icon"></i>
+        <i class="fa-sharp fa-solid fa-cloud weather"></i>
+
+        <div class="row">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <div class="col">Saturday 12°C 💧</div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <div class="col">Sunday 15°C ☀</div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <div class="col">Monday 13°C ❄</div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <div class="col">Tuesday 13°C ☀</div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <div class="col">Wednesday 15°C 💧</div>
+            </div>
+          </div>
+        </div>
+        <h6>
+          <a
+            href="https://github.com/Bukkiedevs/My-next-project"
+            target="_blank"
+            >Open source code </a
+          >by Omoleye Gbemisola
+        </h6>
       </div>
-      <br />
-      <i class="fa-solid fa-cloud-sun icon"></i>
-      <i class="fa-sharp fa-solid fa-cloud weather"></i>
-
-      <div class="row">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="col">Saturday 12°C 💧</div>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="col">Sunday 15°C ☀</div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="col">Monday 13°C ❄</div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="col">Tuesday 13°C ☀</div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="col">Wednesday 15°C 💧</div>
-          </div>
-        </div>
-      </div>
-      <h6>
-        <a href="https://github.com/Bukkiedevs/My-next-project" target="_blank"
-          >Open source code </a
-        >, by Omoleye Gbemisola
-      </h6>
     </div>
     <script src="index.js"></script>
   </body>
