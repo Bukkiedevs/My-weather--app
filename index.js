@@ -11,22 +11,28 @@ let days = [
 ];
 let day = days[currentData.getDay()];
 let hour = currentData.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minute = currentData.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let season = document.querySelector("#season");
 season.innerHTML = `${day} ${hour}:${minute}`;
 
 function showCurrent(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
   let conditionElement = document.querySelector("#condition");
-  conditionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  conditionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  console.log(response.data);
 }
 
 let apiKey = "a33b693cfbefd271b0ed075f9a8f65f0";
