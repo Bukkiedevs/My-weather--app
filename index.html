@@ -33,7 +33,7 @@
 
   <body>
     <div class="container">
-      <div class="weather-strucutre wrapper">
+      <div class="weatherstructure-wrapper">
         <div class="weather-structure">
           <form id="logIn">
             <input
@@ -45,18 +45,26 @@
             />
             <input type="submit" value="Search" id="outputIn" />
           </form>
-          <h1>Stockholm</h1>
-          <ul>
-            <li>Tuesday 05:00</li>
-            <li>Cloudy</li>
-          </ul>
+          <div class="overview">
+            <h1>Stockholm</h1>
+            <ul>
+              <li>Tuesday 05:00</li>
+              <li>Cloudy</li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                alt="cloud"
-              />
-              23°C | °F
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="cloud"
+                  class="flex-start"
+                />
+                <div class="flex-start">
+                  <strong> 12</strong
+                  ><span class="unit">°C |<a href="#">°F</a> </span>
+                </div>
+              </div>
             </div>
 
             <div class="col">

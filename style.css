@@ -16,11 +16,6 @@ li {
   color: #878787;
 }
 
-small {
-  display: block;
-  margin: 5px auto;
-  text-align: center;
-}
 h1 {
   font-size: 24px;
   font-weight: 100;
@@ -28,11 +23,31 @@ h1 {
   color: #878787;
   margin-bottom: 0;
 }
-
-.weather-structure {
-  margin: 30px auto;
+.weatherstructure-wrapper {
   max-width: 600px;
+  margin: 30px auto;
+}
+.weather-structure {
   padding: 20px;
   border: 1px solid;
   border-radius: 5px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+.weather-temperature strong {
+  font-size: 64px;
+  color: rgb(33, 37, 41);
+  font-weight: 400;
+  line-height: 1;
+}
+.unit {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
