@@ -1,47 +1,38 @@
-button {
-  margin-top: 30px;
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid;
-  border-radius: 10px;
-  border-color: #106ee8;
-  font-family: "Xanh Mono", monospace;
+body {
+  font-family: arial, sans-serif;
 }
-button:hover {
-  cursor: pointer;
-  transition: all 200ms ease;
-  background: #106ee8;
+ul {
+  padding: 0;
+  margin: 0;
 }
-.btn-secondary {
-  margin-top: 5px;
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  color: #878787;
 }
-.card {
-  font-family: "Anton", sans-serif;
-  margin: 45px;
-  padding: 15px 15px 15px 15px;
-}
-.icon {
+
+small {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
   text-align: center;
-  margin-left: 950px;
-  margin-bottom: -5px;
-  margin-top: -150px;
-  font-size: 150px;
-  color: #a8d7f7;
 }
-.weather {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 150px;
-  margin-left: 600px;
-  margin-bottom: -5px;
-  margin-top: -150px;
-  color: #a8d7f7;
+h1 {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  color: #878787;
+  margin-bottom: 0;
 }
+
 .weather-structure {
-  border: 15px;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
 }
