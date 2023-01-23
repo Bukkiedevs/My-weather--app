@@ -35,31 +35,34 @@
     <div class="container">
       <div class="weatherstructure-wrapper">
         <div class="weather-structure">
-          <form id="logIn">
-            <input
-              type="text"
-              placeholder="Enter a country"
-              autofocus="on"
-              style="margin-top: 25px; width: 35%"
-              id="inputIn"
-            />
-            <input type="submit" value="Search" id="outputIn" />
+          <form id="search-form" class="mb-3" ;>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  placeholder="Enter a country.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="input-In"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="btn btn-primary" />
+              </div>
+            </div>
           </form>
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li id="season">Tuesday 05:00</li>
+              <li id="date">Tuesday 05:00</li>
               <li id="condition"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col">
               <div class="d-flex weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                  alt="cloud"
-                  class="flex-start"
-                />
+                <img src="" alt="icon-image" class="flex-start" id="icon" />
                 <div class="flex-start">
                   <strong id="temperature"> </strong
                   ><span class="unit">°C |<a href="#">°F</a> </span>
@@ -70,7 +73,7 @@
             <div class="col">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id= "wind"> </span>km/h</li>
+                <li>Wind: <span id="wind"> </span>km/h</li>
               </ul>
             </div>
           </div>
