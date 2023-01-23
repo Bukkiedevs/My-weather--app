@@ -55,14 +55,18 @@ function handleSearch(event) {
   let inputElement = document.querySelector("#input-In");
   search(inputElement.value);
 }
-function handleFaherenehit(event) {
+function handleFahrenheit(event) {
   event.preventDefault();
+  celsuisElement.classList.remove("active");
+  FaherenheitElement.classList.add("active");
   let fahrenheitFormula = (celsuisTemp * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitFormula);
 }
 function handlecelsuis(event) {
   event.preventDefault();
+  celsuisElement.classList.add("active");
+  FaherenheitElement.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsuisTemp);
 }
@@ -74,7 +78,7 @@ let form = document.querySelector("#search-form");
 addEventListener("submit", handleSearch);
 
 let FaherenheitElement = document.querySelector("#fahrenhet-link");
-FaherenheitElement.addEventListener("click", handleFaherenehit);
+FaherenheitElement.addEventListener("click", handleFahrenheit);
 
 let celsuisElement = document.querySelector("#celsuis-link");
 celsuisElement.addEventListener("click", handlecelsuis);
