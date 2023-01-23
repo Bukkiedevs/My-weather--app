@@ -29,6 +29,8 @@ function showCurrent(response) {
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
 
+  celsuisTemp = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   conditionElement.innerHTML = response.data.weather[0].description;
@@ -48,13 +50,31 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrent);
 }
-
-search("Stockholm");
-
 function handleSearch(event) {
   event.preventDefault();
   let inputElement = document.querySelector("#input-In");
   search(inputElement.value);
 }
+function handleFaherenehit(event) {
+  event.preventDefault();
+  let fahrenheitFormula = (celsuisTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitFormula);
+}
+function handlecelsuis(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsuisTemp);
+}
+
+search("Stockholm");
+let celsuisTemp = null;
+
 let form = document.querySelector("#search-form");
 addEventListener("submit", handleSearch);
+
+let FaherenheitElement = document.querySelector("#fahrenhet-link");
+FaherenheitElement.addEventListener("click", handleFaherenehit);
+
+let celsuisElement = document.querySelector("#celsuis-link");
+celsuisElement.addEventListener("click", handlecelsuis);
