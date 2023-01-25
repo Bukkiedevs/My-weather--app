@@ -69,3 +69,19 @@ h1 {
 #input-In {
   background: #f8f6f6;
 }
+.forecast-date {
+  margin-top: 20px;
+  color: rgb(32, 33, 36);
+  font: 16px;
+  font-weight: 400px;
+}
+.max-temperature {
+  color: rgb(32, 33, 36);
+  font-size: 13px;
+  font-weight: 400px;
+}
+.min-temperature {
+  color: rgb(112, 117, 122);
+  font-size: 13px;
+  font-weight: 400px;
+}
