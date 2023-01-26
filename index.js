@@ -21,6 +21,31 @@ if (minute < 10) {
 let date = document.querySelector("#date");
 date.innerHTML = `${day} ${hour}:${minute}`;
 
+function handleForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tues", "Wed", "Thu"];
+  let htmlForecast = `<div class="row">`;
+  days.forEach(function (day) {
+    htmlForecast =
+      htmlForecast +
+      `
+<div class="col-2">
+<div class="forecast-date">${day}</div>
+<img
+  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+  alt="Google image"
+  width="42"
+/>
+<div class="forecast-temperature">
+   <span class="max-temperature"> 24°</span>
+  <span class="min-temperature"> 12° </span>
+</div>
+</div> `;
+  });
+  htmlForecast = htmlForecast + `</div>`;
+  forecastElement.innerHTML = htmlForecast;
+}
+
 function showCurrent(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -71,8 +96,9 @@ function handlecelsuis(event) {
   temperatureElement.innerHTML = Math.round(celsuisTemp);
 }
 
-search("Stockholm");
 let celsuisTemp = null;
+search("Stockholm");
+handleForecast();
 
 let form = document.querySelector("#search-form");
 addEventListener("submit", handleSearch);
