@@ -47,8 +47,8 @@ function handleForecast(response) {
   width="42"
 />
 <div class="forecast-temperature">
-   <span class="max-temperature"> ${Math.round(forecastDay.temp.max)}</span>
-  <span class="min-temperature"> ${Math.round(forecastDay.temp.min)} </span>
+   <span class="max-temperature"> ${Math.round(forecastDay.temp.max)} ° </span>
+  <span class="min-temperature"> ${Math.round(forecastDay.temp.min)}° </span>
 </div>
 </div> `;
     }
