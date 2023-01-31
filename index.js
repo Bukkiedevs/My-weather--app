@@ -30,7 +30,6 @@ function formateDate(date) {
 
 function handleForecast(response) {
   let forecast = response.data.daily;
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let htmlForecast = `<div class="row">`;
@@ -47,8 +46,8 @@ function handleForecast(response) {
   width="42"
 />
 <div class="forecast-temperature">
-   <span class="max-temperature"> ${Math.round(forecastDay.temp.max)} ° </span>
-  <span class="min-temperature"> ${Math.round(forecastDay.temp.min)}° </span>
+   <span class="max-temperature"> ${Math.round(forecastDay.temp.max)}°</span>
+  <span class="min-temperature"> ${Math.round(forecastDay.temp.min)}°</span>
 </div>
 </div> `;
     }
@@ -58,14 +57,12 @@ function handleForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "a33b693cfbefd271b0ed075f9a8f65f0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleForecast);
 }
 
 function showCurrent(response) {
-  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let conditionElement = document.querySelector("#condition");
