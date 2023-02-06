@@ -98,6 +98,8 @@ function handleSearch(event) {
   event.preventDefault();
   let inputElement = document.querySelector("#input-In");
   search(inputElement.value);
+  celsuisElement.classList.add("active");
+  FaherenheitElement.classList.remove("active");
 }
 
 function handleFahrenheit(event) {
