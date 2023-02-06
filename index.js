@@ -99,6 +99,7 @@ function handleSearch(event) {
   let inputElement = document.querySelector("#input-In");
   search(inputElement.value);
 }
+
 function handleFahrenheit(event) {
   event.preventDefault();
   celsuisElement.classList.remove("active");

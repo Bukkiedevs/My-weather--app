@@ -1,6 +1,8 @@
 body {
   font-family: "Quicksand", sans-serif;
   font-family: "Roboto Serif", serif;
+  background-color: lightblue;
+  
 }
 
 ul {
@@ -34,7 +36,6 @@ h1 {
 }
 .weather-structure {
   padding: 20px;
-  background-color: lightblue;
   border: 1px;
   border-radius: 8px;
 }
